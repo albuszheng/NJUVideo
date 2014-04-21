@@ -117,11 +117,16 @@ if($set) {
             </div><!-- breadcrumb end -->
             <div class="row vedio-contant">
                 <div class="col-md-9 video-panel">
+                    <div id="player-panel">
+                    <a href="<?php echo $video_url; ?>" id="player"></a>
+                    </div>
+                    <!-- HTML player
                     <div data-swf="js/flowplayer.swf" class="flowplayer play-button" data-ratio="0.416" data-embed="false">
                         <video>
                             <source src="<?php echo $video_url; ?>"/>
                         </video>
                     </div>
+                    -->
                     <div class="video_header row">
                         <h2 class="col-md-4"><?php echo $video_title; ?></h2>
                         <p class="col-md-4 pull-right">播放数：<?php echo $video_wcount; ?></p>
@@ -175,6 +180,7 @@ if($set) {
         <script src="js/jquery.min.js"></script>
         <script src="js/flowplayer.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <script src="js/flowplayer-3.2.13.min.js"></script>
         <script src="js/stickUp.min.js" type="text/javascript"></script>
         <script type="text/javascript">
               //initiating jQuery
@@ -182,6 +188,9 @@ if($set) {
                 $(document).ready( function() {
                   //enabling stickUp on the '.navbar-wrapper' class
                   $('#navBar').stickUp();
+                    
+                //start flash player
+                    flowplayer("player", "flowplayer-3.2.18.swf");
                 });
               });
         </script>
