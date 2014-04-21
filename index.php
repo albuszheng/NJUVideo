@@ -277,8 +277,13 @@ function top($cid, $c) {
         <div id="footer">
             <div class="container">
             <div class="row">
-                <div class="col-md-3"><img id="footer-logo" src="images/logo%20footer.PNG"></div>
-                <div class="col-md-7 footer-info">
+                <div class="col-md-4 hidden-xs hidden-sm"><img id="footer-logo img-responsive" src="images/logo%20footer.PNG"></div>
+                <div class="col-md-7 footer-info visible-md visible-lg">
+                    <p>Copyright&copy; 2014. All right reserved</p>
+                    <p>南京市栖霞区仙林大道163号。电话：025-89680321 89680322</p>
+                    <p>Technical support: Lilystudio</p>
+                </div>
+                <div class="col-md-7 footer-info-mobile hidden-md hidden-lg">
                     <p>Copyright&copy; 2014. All right reserved</p>
                     <p>南京市栖霞区仙林大道163号。电话：025-89680321 89680322</p>
                     <p>Technical support: Lilystudio</p>
