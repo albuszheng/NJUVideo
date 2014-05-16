@@ -56,6 +56,7 @@ body {
 
 .huge.image {
     width: 100%;
+    height: auto;
     font-size: 1.2em;
 }
 

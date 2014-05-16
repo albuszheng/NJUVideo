@@ -151,9 +151,7 @@ h3 {
 .huge.image + .video-info{
     margin-top: -32px;
 }
-.video-info>h4{
-    padding-left: 2px 
-}
+
 
 .pageTitle {
     color: #333;

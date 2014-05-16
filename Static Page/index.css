@@ -33,7 +33,7 @@ body {
 .nav-logo {
     padding-top: 5px;
     padding-right: 0px;
-    padding-left: 0px;
+    padding-left: 15px;
 }
 
 .nav-search {
@@ -106,7 +106,7 @@ body {
 }
 
 #graduate,#microMovie,#microCourse,#NJUVideoSight {
-    padding-left: 0; 
+/*    padding-left: 0; */
 }
 
 h3 {
@@ -151,9 +151,7 @@ h3 {
 .huge.image + .video-info{
     margin-top: -32px;
 }
-.video-info>h4{
-    padding-left: 2px 
-}
+
 
 .pageTitle {
     color: #333;
