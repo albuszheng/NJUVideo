@@ -7,7 +7,6 @@ body {
 }
 
 .banner {
-    background: url(images/bg.jpg);
     height: 360px;
     overflow:hidden;
 }
@@ -52,7 +51,11 @@ body {
     color: #dcdcdc;
 }
 
-
+#splash {
+    overflow: hidden;
+    list-style: none;
+    display: block;
+}
 
 .huge.image {
     width: 100%;
@@ -241,5 +244,4 @@ h3 {
 .footer-info-mobile {
     text-align: center;
 }
-
 
