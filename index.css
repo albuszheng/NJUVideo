@@ -7,7 +7,6 @@ body {
 }
 
 .banner {
-    background: url(images/bg.jpg);
     height: 360px;
     overflow:hidden;
 }
@@ -33,7 +32,7 @@ body {
 .nav-logo {
     padding-top: 5px;
     padding-right: 0px;
-    padding-left: 0px;
+    padding-left: 15px;
 }
 
 .nav-search {
@@ -52,7 +51,11 @@ body {
     color: #dcdcdc;
 }
 
-
+#splash {
+    overflow: hidden;
+    list-style: none;
+    display: block;
+}
 
 .huge.image {
     width: 100%;
@@ -106,7 +109,7 @@ body {
 }
 
 #graduate,#microMovie,#microCourse,#NJUVideoSight {
-    padding-left: 0; 
+/*    padding-left: 0; */
 }
 
 h3 {
@@ -241,5 +244,4 @@ h3 {
 .footer-info-mobile {
     text-align: center;
 }
-
 
