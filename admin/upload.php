@@ -1,13 +1,6 @@
 <?php
 function showlist() {
-	$conn = mysql_connect("localhost", "lldev", "lilystudio");
-	if (!$conn)
-	{
-		die('Could not connect: ' . mysql_error());
-	}
-	mysql_query("set character set 'utf8'");
-	mysql_query("set names 'utf8'");
-	mysql_select_db("54", $conn);
+	require("../db.php");
 
 	$query = mysql_query("SELECT * FROM category");
 	if(!$query) {
@@ -45,13 +38,16 @@ function showlist() {
 <form id="form" method="post" action="postupload.php" enctype="multipart/form-data">
 	<h1>视频上传</h1>
 
-	标题：<input name="title" type="text" /><br />
+	标题：<input id="title" name="title" type="text" /><br />
 	视频简介：<br />
 	<textarea id="description" name="description" cols="40" rows="4"></textarea><br />
 	类别：<select name="cat">
 		<?php showlist(); ?>
 	</select><br />
 	缩略图：<input id="thumbnail" name="thumbnail" type="file" accept="image/png, image/jpeg"/><br />
+	外站视频：<input id="html" name="html" type="text" /><br />
+	示例：&lt;iframe height=498 width=510 src="<span style="color: red">http://player.youku.com/embed/XNzEyNTM3Nzc2</span>" frameborder=0 allowfullscreen&gt;&lt;/iframe&gt;<br />
+	请填写：http://player.youku.com/embed/XNzEyNTM3Nzc2<br />
 
 	<div style="float: left; margin-right: 20px">
 		<h3>选择视频文件</h3>
@@ -122,8 +118,12 @@ $(function() {
 			alert("未选择缩略图！");
 			return false;
 		}
-		if(!f_done){
-			alert("视频尚未上传成功");
+		if(!f_done && $("#html").val() == ''){
+			alert("视频尚未上传成功，或未填写外站视频信息");
+			return false;
+		}
+		if(f_done && $("#html").val() != ''){
+			alert("不可同时上传视频、填写外站视频信息");
 			return false;
 		}
 		return true;

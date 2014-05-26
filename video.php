@@ -7,14 +7,7 @@ if(!preg_match("/^[0-9]+$/", $id)) {
     die();
 }
 
-$conn = mysql_connect("localhost", "lldev", "lilystudio");
-if (!$conn)
-{
-    die('Could not connect: ' . mysql_error());
-}
-mysql_query("set character set 'utf8'");
-mysql_query("set names 'utf8'");
-mysql_select_db("54", $conn);
+require("db.php");
 
 $query = mysql_query("SELECT * FROM category WHERE id=$id");
 if(!$query) {
@@ -103,7 +96,7 @@ function topnew($id) {
                     <a href="/"><img class="nav-logo" src="images/logo%20small.png"></a>
                 </div>
                 <ul class="nav navbar-nav collapse navbar-collapse navbar-header-collapse">
-                    <li<?php if($id==5){?> class="active li"<?php } ?>><a href="video.php?id=5">毕业季</a></li>
+                    <!-- <li<?php if($id==5){?> class="active li"<?php } ?>><a href="video.php?id=5">毕业季</a></li> -->
                     <li<?php if($id==2){?> class="active li"<?php } ?>><a href="video.php?id=2">微电影</a></li>
                     <li<?php if($id==3){?> class="active li"<?php } ?>><a href="video.php?id=3">微课程</a></li>
                     <li<?php if($id==4){?> class="active li"<?php } ?>><a href="video.php?id=4">NJU视角</a></li>

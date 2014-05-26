@@ -1,12 +1,5 @@
 <?php
-$conn = mysql_connect("localhost", "lldev", "lilystudio");
-if (!$conn)
-{
-    die('Could not connect: ' . mysql_error());
-}
-mysql_query("set character set 'utf8'");
-mysql_query("set names 'utf8'");
-mysql_select_db("54", $conn);
+require("db.php");
 
 $vid = $_GET['id'];
 if($vid=="") {
@@ -24,7 +17,12 @@ if(!$row) {
     die();
 }
 $video_title = $row['title'];
-$video_url = "video/".$row['video_file'];
+if ($row['video_file']!="") {
+    $video_url = "video/".$row['video_file'];
+} else {
+    $video_html = $row['html'];
+}
+
 $video_date = $row['publish_time'];
 $video_description = $row['description'];
 $video_wcount = $row['wcount'];
@@ -118,7 +116,10 @@ if($set) {
             <div class="row vedio-contant">
                 <div class="col-md-9 video-panel">
                     <div id="player-panel">
-                    <a href="<?php echo $video_url; ?>" id="player"></a>
+                        <?php if ($row['video_file']!="") { ?>
+                            <a href="<?php echo $video_url; ?>" id="player"></a>
+                        <?php } else
+                            echo "<iframe height=527 width=847 src=\"$video_html\" frameborder=0 allowfullscreen></iframe>"; ?>
                     </div>
                     <!-- HTML player
                     <div data-swf="js/flowplayer.swf" class="flowplayer play-button" data-ratio="0.416" data-embed="false">
@@ -177,11 +178,12 @@ if($set) {
             </div>
         </div>
         <!-- js -->
-        <script src="js/jquery.min.js"></script>
         <script src="js/flowplayer.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/flowplayer-3.2.13.min.js"></script>
+        <script src="js/flowplayer.ipad-3.2.13.min.js"></script>
         <script src="js/stickUp.min.js" type="text/javascript"></script>
+        <?php if ($row['video_file']!="") { ?>
         <script type="text/javascript">
               //initiating jQuery
               jQuery(function($) {
@@ -190,9 +192,16 @@ if($set) {
                   $('#navBar').stickUp();
                     
                 //start flash player
-                    flowplayer("player", "flowplayer-3.2.18.swf");
+                    flowplayer("player", "js/flowplayer-3.2.18.swf", {
+                        clip: {
+                            // enable hardware acceleration
+                            accelerated: true,
+                            scaling: 'fit'
+                        }
+                    }).ipad();
                 });
               });
         </script>
+        <?php } ?>
     </body>
 </html>

@@ -7,6 +7,7 @@ body {
 }
 
 .banner {
+    background: url(images/bg.jpg);
     height: 360px;
     overflow:hidden;
 }
@@ -51,7 +52,7 @@ body {
     color: #dcdcdc;
 }
 
-#splash {
+#splasch {
     overflow: hidden;
     list-style: none;
     display: block;
@@ -154,7 +155,9 @@ h3 {
 .huge.image + .video-info{
     margin-top: -32px;
 }
-
+.video-info>h4{
+    padding-left: 2px 
+}
 
 .pageTitle {
     color: #333;
@@ -165,7 +168,7 @@ h3 {
     background: #f4f4f4;
 }
 .video-info h4 {
-    color: #ffffff;
+    color: #000000;
 }
 
 .picturefill-large {
@@ -243,5 +246,35 @@ h3 {
 
 .footer-info-mobile {
     text-align: center;
+}
+ 
+ .col-md-8>.video-info, .col-md-6>.video-info{
+    margin-top: -32px;
+}
+
+.video-info > h4{
+    padding-left: 2px 
+}
+
+.pageTitle {
+    color: #333;
+}
+
+.pageTitle:hover {
+    color: #454545;
+    text-decoration: none;
+    background: #f4f4f4;
+}
+.video-info h4 {
+    color: #ffffff;
+}
+
+.small.image {
+    width: 91%;
+    font-size: 1rem;
+}
+
+a,a:hover,a:active{
+    color:#974694;
 }
 

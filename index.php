@@ -1,12 +1,5 @@
 <?php
-$conn = mysql_connect("localhost", "lldev", "lilystudio");
-if (!$conn)
-{
-    die('Could not connect: ' . mysql_error());
-}
-mysql_query("set character set 'utf8'");
-mysql_query("set names 'utf8'");
-mysql_select_db("54", $conn);
+require("db.php");
 
 function rankingList() {
     $query = mysql_query("SELECT * FROM video ORDER BY wcount DESC LIMIT 0, 10");
@@ -95,7 +88,7 @@ function top($cid, $c) {
                     <a href="/"><img class="nav-logo" src="images/logo%20small.png"></a>
                 </div>
                 <ul class="nav navbar-nav collapse navbar-collapse navbar-header-collapse">
-                    <li><a href="video.php?id=5">毕业季</a></li>
+                    <!-- <li><a href="video.php?id=5">毕业季</a></li> -->
                     <li><a href="video.php?id=2">微电影</a></li>
                     <li><a href="video.php?id=3">微课程</a></li>
                     <li><a href="video.php?id=4">NJU视角</a></li>
@@ -116,11 +109,12 @@ function top($cid, $c) {
         <div class="container">
         <!-- 毕业季 -->
         <?php
-            $t = top(5, 3);
+            // $t = top(5, 3);
+            $t = top(2,3);
         ?>
         <div class="row">
         <div id="graduate" class="col-md-9 main-content">
-            <h3><a class="pageTitle" href="video.php?id=5">毕业季</a></h3>
+            <h3><a class="pageTitle" href="video.php?id=5">微电影</a></h3>
             <div class="underline"></div>
             <div class="row">
                 <div class="col-md-8">
@@ -184,9 +178,9 @@ function top($cid, $c) {
         </div>
         <!-- 微电影 -->
         <?php
-            $t = top(2, 5);
+            // $t = top(2, 5);
         ?>
-       <div class="row">
+       <!--<div class="row"> 
         <div id="microMovie" class="col-md-12 main-content">
             <h3><a class="pageTitle" href="video.php?id=2">微电影</a></h3>
             <div class="underline"></div>
@@ -214,7 +208,7 @@ function top($cid, $c) {
                 </div>
             </div>
         </div>
-        </div>
+        </div> -->
         <!-- NJU视角 -->
         <?php
             $t = top(4, 5);
@@ -290,7 +284,7 @@ function top($cid, $c) {
                 timeout: 4000,
                 speed: 1000,
 //                tabWidth: "10%",
-                slideWidth: "60%",
+                slideWidth: "70%",
                 width: "100%",
                 height: 360,
                 trigger: "mouseover",
