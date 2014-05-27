@@ -148,9 +148,7 @@ h3 {
     margin-top: 20px;
 }
 
-.huge.image + .video-info{
-    margin-top: -32px;
-}
+
 .video-info>h4{
     padding-left: 2px 
 }
