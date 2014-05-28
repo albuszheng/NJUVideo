@@ -97,7 +97,7 @@ body {
     list-style-position: inside;
 }
 
-.videoList >ul li {
+.videoList >ul  li:first-child {
     margin-bottom: 26px;
 }
 

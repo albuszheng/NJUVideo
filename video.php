@@ -137,7 +137,7 @@ function topnew($id) {
                     <a href="<?php echo $t[0]["url"]; ?>"><img class="huge image" src="<?php echo $t[0]["tn"]; ?>"></a>
                     <div class="video-info">
                     <h4><?php echo $t[0]["title"]; ?></h4>
-                    <p class="video-info-spc"><span class="time"><?php echo $t[0]["date"]; ?></span> <span class="clicks">点击率：<?php echo $t[0]["wcount"]; ?></span></p>
+                    <p class="video-info-spc sub-info"><span class="time"><?php echo $t[0]["date"]; ?></span> <span class="clicks">点击率：<?php echo $t[0]["wcount"]; ?></span></p>
                     </div>
                 </div>
                 <div class="videoList col-md-6">
@@ -170,7 +170,7 @@ function topnew($id) {
                     <a href="<?php echo $t[0]["url"]; ?>"><img class="huge image" src="<?php echo $t[0]["tn"]; ?>"></a>
                     <div class="video-info">
                     <h4><?php echo $t[0]["title"]; ?></h4>
-                    <p class="video-info-spc"><span class="time"><?php echo $t[0]["date"]; ?></span> <span class="clicks">点击率：<?php echo $t[0]["wcount"]; ?></span></p>
+                    <p class="video-info-spc sub-info"><span class="time"><?php echo $t[0]["date"]; ?></span> <span class="clicks">点击率：<?php echo $t[0]["wcount"]; ?></span></p>
                     </div>
                 </div>
                 <div class="videoList col-md-6">
