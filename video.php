@@ -144,12 +144,12 @@ function topnew($id) {
                     <ul>
                         <div class="row">
                         <div class="col-md-6">
-                            <li><a href="<?php echo $t[1]["url"]; ?>"><img class="small image" src="<?php echo $t[1]["tn"]; ?>"></a><h5 class="video-info"><?php echo $t[1]["title"]; ?></h5></li>
-                            <li><a href="<?php echo $t[2]["url"]; ?>"><img class="small image" src="<?php echo $t[2]["tn"]; ?>"></a><h5 class="video-info"><?php echo $t[2]["title"]; ?></h5></li>
+                            <li><a href="<?php echo $t[1]["url"]; ?>"><img class="small image" src="<?php echo $t[1]["tn"]; ?>"></a><h5 class="video-info-small"><?php echo $t[1]["title"]; ?></h5></li>
+                            <li><a href="<?php echo $t[2]["url"]; ?>"><img class="small image" src="<?php echo $t[2]["tn"]; ?>"></a><h5 class="video-info-small"><?php echo $t[2]["title"]; ?></h5></li>
                         </div>
                         <div class="col-md-6">
-                            <li><a href="<?php echo $t[3]["url"]; ?>"><img class="small image" src="<?php echo $t[3]["tn"]; ?>"></a><h5><?php echo $t[3]["title"]; ?></h5></li>
-                            <li><a href="<?php echo $t[4]["url"]; ?>"><img class="small image" src="<?php echo $t[4]["tn"]; ?>"></a><h5><?php echo $t[4]["title"]; ?></h5></li>
+                            <li><a href="<?php echo $t[3]["url"]; ?>"><img class="small image" src="<?php echo $t[3]["tn"]; ?>"></a><h5 class="video-info-small"><?php echo $t[3]["title"]; ?></h5></li>
+                            <li><a href="<?php echo $t[4]["url"]; ?>"><img class="small image" src="<?php echo $t[4]["tn"]; ?>"></a><h5 class="video-info-small"><?php echo $t[4]["title"]; ?></h5></li>
                         </div>
                         </div>
                     </ul>
@@ -177,12 +177,12 @@ function topnew($id) {
                     <ul>
                         <div class="row">
                         <div class="col-md-6">
-                            <li><a href="<?php echo $t[1]["url"]; ?>"><img class="small image" src="<?php echo $t[1]["tn"]; ?>"></a><h5 class="video-info"><?php echo $t[1]["title"]; ?></h5></li>
-                            <li><a href="<?php echo $t[2]["url"]; ?>"><img class="small image" src="<?php echo $t[2]["tn"]; ?>"></a><h5 class="video-info"><?php echo $t[2]["title"]; ?></h5></li>
+                            <li><a href="<?php echo $t[1]["url"]; ?>"><img class="small image" src="<?php echo $t[1]["tn"]; ?>"></a><h5 class="video-info-small"><?php echo $t[1]["title"]; ?></h5></li>
+                            <li><a href="<?php echo $t[2]["url"]; ?>"><img class="small image" src="<?php echo $t[2]["tn"]; ?>"></a><h5 class="video-info-small"><?php echo $t[2]["title"]; ?></h5></li>
                         </div>
                         <div class="col-md-6">
-                            <li><a href="<?php echo $t[3]["url"]; ?>"><img class="small image" src="<?php echo $t[3]["tn"]; ?>"></a><h5><?php echo $t[3]["title"]; ?></h5></li>
-                            <li><a href="<?php echo $t[4]["url"]; ?>"><img class="small image" src="<?php echo $t[4]["tn"]; ?>"></a><h5><?php echo $t[4]["title"]; ?></h5></li>
+                            <li><a href="<?php echo $t[3]["url"]; ?>"><img class="small image" src="<?php echo $t[3]["tn"]; ?>"></a><h5 class="video-info-small"><?php echo $t[3]["title"]; ?></h5></li>
+                            <li><a href="<?php echo $t[4]["url"]; ?>"><img class="small image" src="<?php echo $t[4]["tn"]; ?>"></a><h5 class="video-info-small"><?php echo $t[4]["title"]; ?></h5></li>
                         </div>
                         </div>
                     </ul>
