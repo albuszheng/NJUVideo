@@ -68,42 +68,22 @@ body {
     font-size: 1rem;
 }
 
-#microMovie .videoList {
-    padding-left: 0px;
-    list-style-position: inside;
-}
-
-.videoList .row{
-    margin-left: -43px;
-    padding-left: -30px;
-}
-
-#microCourse .videoList {
-    padding-left: 0px;
-    list-style-position: inside;
-}
-
-#NJUVideoSight .videoList {
-    padding-left: 0px;
-    list-style-position: inside;
-}
-
-#graduate .videoList {
-/*    text-align: right;*/
-    /*    list-style:none;*/
-/*    padding-right: 0px;*/
-/*    padding-left: px;*/
-    margin-left: 00px;
+#NJUVideoSight,#microCourse,#graduate,#microMovie .videoList {
+/*    padding-left: 10px;*/
     list-style-position: inside;
 }
 
 .videoList >ul  li:first-child {
-    margin-bottom: 26px;
+/*    margin-bottom: 0px;*/
+}
+
+.videoList ul{
+    padding-left: 0px;
 }
 
 .videoList li{
     list-style: none;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
 
 .underline {
@@ -111,10 +91,6 @@ body {
     background-repeat: repeat-x;
     height: 2px;
     margin-bottom: 20px;
-}
-
-#graduate,#microMovie,#microCourse,#NJUVideoSight {
-/*    padding-left: 0; */
 }
 
 h3 {
@@ -125,14 +101,17 @@ h3 {
     text-align: left;
     list-style-position: inside;
 }
+
 #rankingList ol>li>a {
     display: inline-block;
 }
+
 #rankingList li h5 {
     font-size: 1.2em;
     margin-top: 0px;
     margin-bottom: 10px;
 }
+
 #footer {
     background: #630460;
     padding: 0px;
@@ -155,7 +134,7 @@ h3 {
     margin-top: -28px;
     text-align: right;
     padding-right: 2px;
-    color: #ffffff;
+    color: #f4f4f4;
 }
 
 .main-content {
@@ -164,28 +143,40 @@ h3 {
 }
 
 .huge.image + .video-info{
-    margin-top: -32px;
+    margin-top: -32p;
 }
-.video-info>h4{
-    padding-left: 2px 
+
+.video-info h4{
+    padding-left: 2px;
+/*    color: #000000;*/
 }
 
 .small.image + .video-info{
-    margin-top: -17px;
+    margin-top: -33px;
     padding-left: 2px;
-    color: #ffffff;
+    color: #f4f4f4;
+    margin-bottom: 10px;
 }
+
+.small.image + .video-info h5{
+/*    padding: 0px;*/
+    margin: 1px;
+}
+
+/*
+.video-info:hover,.video-info:active{
+    background-color: black;
+}
+*/
 
 .pageTitle {
     color: #333;
 }
+
 .pageTitle:hover {
     color: #454545;
     text-decoration: none;
     background: #f4f4f4;
-}
-.video-info h4 {
-    color: #000000;
 }
 
 .picturefill-large {
@@ -284,11 +275,6 @@ h3 {
 }
 .video-info h4 {
     color: #ffffff;
-}
-
-.small.image {
-    width: 91%;
-    font-size: 1rem;
 }
 
 a,a:hover,a:active{

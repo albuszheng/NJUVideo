@@ -2,13 +2,33 @@
 require("db.php");
 
 function rankingList() {
-    $query = mysql_query("SELECT * FROM video ORDER BY wcount DESC LIMIT 0, 10");
+    $query = mysql_query("SELECT * FROM video ORDER BY wcount DESC LIMIT 3, 10");
     if(!$query) {
         die(mysql_error());
     }
     while($row = mysql_fetch_array($query)) {
         echo "<li><a href=\"video_play.php?id={$row['id']}\"><h5>{$row['title']}</h5></a></li>\n";
     }
+}
+
+function rank3() {
+    $t = array();
+    $query = mysql_query("SELECT * FROM video ORDER BY wcount DESC LIMIT 0, 3");
+    if(!$query) {
+        die(mysql_error());
+    }
+    while($row = mysql_fetch_array($query)) {
+        $a = array(
+                "id" => $row['id'],
+                "title" => $row['title'],
+                "tn" => "thumbnail/".$row['thumbnail_file'],
+                "date" => $row['publish_time'],
+                "wcount" => $row['wcount'],
+                "url" => "/video_play.php?id=".$row['id']
+            );
+        $t[] = $a;
+    }
+    return $t;
 }
 
 function top($cid, $c) {
@@ -110,11 +130,12 @@ function top($cid, $c) {
         <!-- 毕业季 -->
         <?php
             // $t = top(5, 3);
-            $t = top(2,3);
+            $t = rank3();
         ?>
         <div class="row">
         <div id="graduate" class="col-md-9 main-content">
-            <h3><a class="pageTitle" href="video.php?id=5">微电影</a></h3>
+            <!--<h3><a class="pageTitle" href="video.php?id=2">微电影</a></h3>-->
+            <h3 class="pageTitle">热门视频</h3>
             <div class="underline"></div>
             <div class="row">
                 <div class="col-md-8">
@@ -178,9 +199,9 @@ function top($cid, $c) {
         </div>
         <!-- 微电影 -->
         <?php
-            // $t = top(2, 5);
+            $t = top(2, 5);
         ?>
-       <!--<div class="row"> 
+       <div class="row"> 
         <div id="microMovie" class="col-md-12 main-content">
             <h3><a class="pageTitle" href="video.php?id=2">微电影</a></h3>
             <div class="underline"></div>
@@ -208,7 +229,7 @@ function top($cid, $c) {
                 </div>
             </div>
         </div>
-        </div> -->
+        </div> 
         <!-- NJU视角 -->
         <?php
             $t = top(4, 5);
