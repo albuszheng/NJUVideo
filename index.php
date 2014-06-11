@@ -127,7 +127,7 @@ function top($cid, $c) {
             </div>
         </div>
         <div class="container">
-        <!-- 毕业季 -->
+        <!-- 热门视频 -->
         <?php
             // $t = top(5, 3);
             $t = rank3();
@@ -147,8 +147,20 @@ function top($cid, $c) {
                 </div>
                 <div class="videoList col-md-4">
                     <ul class="list-unstyled">
-                        <li><a href="<?php echo $t[1]["url"]; ?>"><img class="small image" src="<?php echo $t[1]["tn"]; ?>"></a><h5 class="video-info-small"><?php echo $t[1]["title"]; ?></h5></li>
-                        <li><a href="<?php echo $t[2]["url"]; ?>"><img class="small image" src="<?php echo $t[2]["tn"]; ?>"></a><h5 class="video-info-small"><?php echo $t[2]["title"]; ?></h5></li>
+                        <li>
+                            <a href="<?php echo $t[1]["url"]; ?>"><img class="small image" src="<?php echo $t[1]["tn"]; ?>"></a>
+                            <div class="video-info">
+                                <h5><span class="clicks">点击率：<?php echo $t[1]["wcount"]; ?></span></h5>
+                                <h5><?php echo $t[1]["title"]; ?></h5>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="<?php echo $t[2]["url"]; ?>"><img class="small image" src="<?php echo $t[2]["tn"]; ?>"></a>
+                            <div class="video-info">
+                                <h5><span class="clicks">点击率：<?php echo $t[2]["wcount"]; ?></span></h5>
+                                <h5><?php echo $t[2]["title"]; ?></h5>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -166,73 +178,151 @@ function top($cid, $c) {
         </div>
         <!-- 微课程 -->
         <?php
-            $t = top(3, 5);
+            $t = top(3, 8);
         ?>
         <div class="row">
         <div id="microCourse" class="col-md-12 main-content">
             <h3><a class="pageTitle" href="video.php?id=3">微课程</a></h3>
             <div class="underline"></div>
-            <div class="row">
-                <div class="col-md-6">
-                    <a href="<?php echo $t[0]["url"]; ?>"><img class="huge image" src="<?php echo $t[0]["tn"]; ?>"></a>
-                    <div class="video-info">
-                    <h4><?php echo $t[0]["title"]; ?></h4>
-                    <p class="video-info-spc sub-info"><span class="time"><?php echo $t[0]["date"]; ?></span> <span class="clicks">点击率：<?php echo $t[0]["wcount"]; ?></span></p>
-                    </div>
-                </div>
-                <div class="videoList col-md-6">
-                    <ul>
-                        <div class="row">
-                        <div class="col-md-6">
-                            <li><a href="<?php echo $t[1]["url"]; ?>"><img class="small image" src="<?php echo $t[1]["tn"]; ?>"></a><h5 class="video-info-small"><?php echo $t[1]["title"]; ?></h5></li>
-                            <li><a href="<?php echo $t[2]["url"]; ?>"><img class="small image" src="<?php echo $t[2]["tn"]; ?>"></a><h5 class="video-info-small"><?php echo $t[2]["title"]; ?></h5></li>
-                        </div>
-                        <div class="col-md-6">
-                            <li><a href="<?php echo $t[3]["url"]; ?>"><img class="small image" src="<?php echo $t[3]["tn"]; ?>"></a><h5 class="video-info-small"><?php echo $t[3]["title"]; ?></h5></li>
-                            <li><a href="<?php echo $t[4]["url"]; ?>"><img class="small image" src="<?php echo $t[4]["tn"]; ?>"></a><h5 class="video-info-small"><?php echo $t[4]["title"]; ?></h5></li>
-                        </div>
-                        </div>
-                    </ul>
-                </div>
+            <div class="videoList">
+                <ul class="row">
+                    <li class="col-md-3">
+                        <a href="<?php echo $t[0]["url"]; ?>"><img class="small image" src="<?php echo $t[0]["tn"]; ?>"></a>
+                        <div class="video-info">
+                            <h5><span class="clicks">点击率：<?php echo $t[0]["wcount"]; ?></span></h5>
+                            <h5><?php echo $t[0]["title"]; ?></h5>
+                        </div>                            
+                    </li>
+                    <li class="col-md-3">
+                        <a href="<?php echo $t[1]["url"]; ?>"><img class="small image" src="<?php echo $t[1]["tn"]; ?>"></a>
+                        <div class="video-info">
+                            <h5><span class="clicks">点击率：<?php echo $t[1]["wcount"]; ?></span></h5>
+                            <h5><?php echo $t[1]["title"]; ?></h5>
+                        </div>                            
+                    </li>                    
+                    <li class="col-md-3">
+                        <a href="<?php echo $t[2]["url"]; ?>"><img class="small image" src="<?php echo $t[2]["tn"]; ?>"></a>
+                        <div class="video-info">
+                            <h5><span class="clicks">点击率：<?php echo $t[2]["wcount"]; ?></span></h5>
+                            <h5><?php echo $t[2]["title"]; ?></h5>
+                        </div>                            
+                    </li>
+                    <li class="col-md-3">
+                        <a href="<?php echo $t[3]["url"]; ?>"><img class="small image" src="<?php echo $t[3]["tn"]; ?>"></a>
+                        <div class="video-info">
+                            <h5><span class="clicks">点击率：<?php echo $t[3]["wcount"]; ?></span></h5>
+                            <h5><?php echo $t[3]["title"]; ?></h5>
+                        </div>                            
+                    </li>
+                </ul>
+                <ul class="row">                    
+                    <li class="col-md-3">
+                        <a href="<?php echo $t[4]["url"]; ?>"><img class="small image" src="<?php echo $t[4]["tn"]; ?>"></a>
+                        <div class="video-info">
+                            <h5><span class="clicks">点击率：<?php echo $t[4]["wcount"]; ?></span></h5>
+                            <h5><?php echo $t[4]["title"]; ?></h5>
+                        </div>                            
+                    </li>
+                    <li class="col-md-3">
+                        <a href="<?php echo $t[5]["url"]; ?>"><img class="small image" src="<?php echo $t[5]["tn"]; ?>"></a>
+                        <div class="video-info">
+                            <h5><span class="clicks">点击率：<?php echo $t[5]["wcount"]; ?></span></h5>
+                            <h5><?php echo $t[5]["title"]; ?></h5>
+                        </div>                            
+                    </li>                    
+                    <li class="col-md-3">
+                        <a href="<?php echo $t[6]["url"]; ?>"><img class="small image" src="<?php echo $t[6]["tn"]; ?>"></a>
+                        <div class="video-info">
+                            <h5><span class="clicks">点击率：<?php echo $t[6]["wcount"]; ?></span></h5>
+                            <h5><?php echo $t[6]["title"]; ?></h5>
+                        </div>                            
+                    </li>
+                    <li class="col-md-3">
+                        <a href="<?php echo $t[7]["url"]; ?>"><img class="small image" src="<?php echo $t[7]["tn"]; ?>"></a>
+                        <div class="video-info">
+                            <h5><span class="clicks">点击率：<?php echo $t[7]["wcount"]; ?></span></h5>
+                            <h5><?php echo $t[7]["title"]; ?></h5>
+                        </div>                            
+                    </li>                
+                </ul>
             </div>
         </div>
         </div>
         <!-- 微电影 -->
         <?php
-            $t = top(2, 5);
+            $t = top(2, 8);
         ?>
        <div class="row"> 
         <div id="microMovie" class="col-md-12 main-content">
             <h3><a class="pageTitle" href="video.php?id=2">微电影</a></h3>
             <div class="underline"></div>
-            <div class="row">
-                <div class="col-md-6">
-                    <a href="<?php echo $t[0]["url"]; ?>"><img class="huge image" src="<?php echo $t[0]["tn"]; ?>"></a>
-                    <div class="video-info">
-                    <h4><?php echo $t[0]["title"]; ?></h4>
-                    <p class="video-info-spc"><span class="time"><?php echo $t[0]["date"]; ?></span> <span class="clicks">点击率：<?php echo $t[0]["wcount"]; ?></span></p>
-                    </div>
-                </div>
-                <div class="videoList col-md-6">
-                    <ul>
-                        <div class="row">
-                        <div class="col-md-6">
-                            <li><a href="<?php echo $t[1]["url"]; ?>"><img class="small image" src="<?php echo $t[1]["tn"]; ?>"></a><h5 class="video-info-small"><?php echo $t[1]["title"]; ?></h5></li>
-                            <li><a href="<?php echo $t[2]["url"]; ?>"><img class="small image" src="<?php echo $t[2]["tn"]; ?>"></a><h5 class="video-info-small"><?php echo $t[2]["title"]; ?></h5></li>
-                        </div>
-                        <div class="col-md-6">
-                            <li><a href="<?php echo $t[3]["url"]; ?>"><img class="small image" src="<?php echo $t[3]["tn"]; ?>"></a><h5 class="video-info-small"><?php echo $t[3]["title"]; ?></h5></li>
-                            <li><a href="<?php echo $t[4]["url"]; ?>"><img class="small image" src="<?php echo $t[4]["tn"]; ?>"></a><h5 class="video-info-small"><?php echo $t[4]["title"]; ?></h5></li>
-                        </div>
-                        </div>
-                    </ul>
-                </div>
+            <div class="videoList">
+                <ul class="row">
+                    <li class="col-md-3">
+                        <a href="<?php echo $t[0]["url"]; ?>"><img class="small image" src="<?php echo $t[0]["tn"]; ?>"></a>
+                        <div class="video-info">
+                            <h5><span class="clicks">点击率：<?php echo $t[0]["wcount"]; ?></span></h5>
+                            <h5><?php echo $t[0]["title"]; ?></h5>
+                        </div>                            
+                    </li>
+                    <li class="col-md-3">
+                        <a href="<?php echo $t[1]["url"]; ?>"><img class="small image" src="<?php echo $t[1]["tn"]; ?>"></a>
+                        <div class="video-info">
+                            <h5><span class="clicks">点击率：<?php echo $t[1]["wcount"]; ?></span></h5>
+                            <h5><?php echo $t[1]["title"]; ?></h5>
+                        </div>                            
+                    </li>                    
+                    <li class="col-md-3">
+                        <a href="<?php echo $t[2]["url"]; ?>"><img class="small image" src="<?php echo $t[2]["tn"]; ?>"></a>
+                        <div class="video-info">
+                            <h5><span class="clicks">点击率：<?php echo $t[2]["wcount"]; ?></span></h5>
+                            <h5><?php echo $t[2]["title"]; ?></h5>
+                        </div>                            
+                    </li>
+                    <li class="col-md-3">
+                        <a href="<?php echo $t[3]["url"]; ?>"><img class="small image" src="<?php echo $t[3]["tn"]; ?>"></a>
+                        <div class="video-info">
+                            <h5><span class="clicks">点击率：<?php echo $t[3]["wcount"]; ?></span></h5>
+                            <h5><?php echo $t[3]["title"]; ?></h5>
+                        </div>                            
+                    </li> 
+                </ul>
+                <ul class="row">                   
+                    <li class="col-md-3">
+                        <a href="<?php echo $t[4]["url"]; ?>"><img class="small image" src="<?php echo $t[4]["tn"]; ?>"></a>
+                        <div class="video-info">
+                            <h5><span class="clicks">点击率：<?php echo $t[4]["wcount"]; ?></span></h5>
+                            <h5><?php echo $t[4]["title"]; ?></h5>
+                        </div>                            
+                    </li>
+                    <li class="col-md-3">
+                        <a href="<?php echo $t[5]["url"]; ?>"><img class="small image" src="<?php echo $t[5]["tn"]; ?>"></a>
+                        <div class="video-info">
+                            <h5><span class="clicks">点击率：<?php echo $t[5]["wcount"]; ?></span></h5>
+                            <h5><?php echo $t[5]["title"]; ?></h5>
+                        </div>                            
+                    </li>                    
+                    <li class="col-md-3">
+                        <a href="<?php echo $t[6]["url"]; ?>"><img class="small image" src="<?php echo $t[6]["tn"]; ?>"></a>
+                        <div class="video-info">
+                            <h5><span class="clicks">点击率：<?php echo $t[6]["wcount"]; ?></span></h5>
+                            <h5><?php echo $t[6]["title"]; ?></h5>
+                        </div>                            
+                    </li>
+                    <li class="col-md-3">
+                        <a href="<?php echo $t[7]["url"]; ?>"><img class="small image" src="<?php echo $t[7]["tn"]; ?>"></a>
+                        <div class="video-info">
+                            <h5><span class="clicks">点击率：<?php echo $t[7]["wcount"]; ?></span></h5>
+                            <h5><?php echo $t[7]["title"]; ?></h5>
+                        </div>                            
+                    </li>                
+                </ul>
             </div>
         </div>
         </div> 
         <!-- NJU视角 -->
         <?php
-            $t = top(4, 5);
+            $t = top(4, 8);
         ?>
         <div class="row">
         <div id="NJUVideoSight" class="col-md-12 main-content">
@@ -242,28 +332,67 @@ function top($cid, $c) {
                 </span>
             </h3>
             <div class="underline"></div>
-            <div class="row">
-                <div class="col-md-6">
-                    <a href="<?php echo $t[0]["url"]; ?>"><img class="huge image" src="<?php echo $t[0]["tn"]; ?>"></a>
-                    <div class="video-info">
-                    <h4><?php echo $t[0]["title"]; ?></h4>
-                    <p class="video-info-spc"><span class="time"><?php echo $t[0]["date"]; ?></span> <span class="clicks">点击率：<?php echo $t[0]["wcount"]; ?></span></p>
-                    </div>
-                </div>
-                <div class="videoList col-md-6">
-                    <ul>
-                        <div class="row">
-                        <div class="col-md-6">
-                            <li><a href="<?php echo $t[1]["url"]; ?>"><img class="small image" src="<?php echo $t[1]["tn"]; ?>"></a><h5 class="video-info-small"><?php echo $t[1]["title"]; ?></h5></li>
-                            <li><a href="<?php echo $t[2]["url"]; ?>"><img class="small image" src="<?php echo $t[2]["tn"]; ?>"></a><h5 class="video-info-small"><?php echo $t[2]["title"]; ?></h5></li>
-                        </div>
-                        <div class="col-md-6">
-                            <li><a href="<?php echo $t[3]["url"]; ?>"><img class="small image" src="<?php echo $t[3]["tn"]; ?>"></a><h5 class="video-info-small"><?php echo $t[3]["title"]; ?></h5></li>
-                            <li><a href="<?php echo $t[4]["url"]; ?>"><img class="small image" src="<?php echo $t[4]["tn"]; ?>"></a><h5 class="video-info-small"><?php echo $t[4]["title"]; ?></h5></li>
-                        </div>
-                        </div>
-                    </ul>
-                </div>
+            <div class="videoList">
+                <ul class="row">
+                    <li class="col-md-3">
+                        <a href="<?php echo $t[0]["url"]; ?>"><img class="small image" src="<?php echo $t[0]["tn"]; ?>"></a>
+                        <div class="video-info">
+                            <h5><span class="clicks">点击率：<?php echo $t[0]["wcount"]; ?></span></h5>
+                            <h5><?php echo $t[0]["title"]; ?></h5>
+                        </div>                            
+                    </li>
+                    <li class="col-md-3">
+                        <a href="<?php echo $t[1]["url"]; ?>"><img class="small image" src="<?php echo $t[1]["tn"]; ?>"></a>
+                        <div class="video-info">
+                            <h5><span class="clicks">点击率：<?php echo $t[1]["wcount"]; ?></span></h5>
+                            <h5><?php echo $t[1]["title"]; ?></h5>
+                        </div>                            
+                    </li>                    
+                    <li class="col-md-3">
+                        <a href="<?php echo $t[2]["url"]; ?>"><img class="small image" src="<?php echo $t[2]["tn"]; ?>"></a>
+                        <div class="video-info">
+                            <h5><span class="clicks">点击率：<?php echo $t[2]["wcount"]; ?></span></h5>
+                            <h5><?php echo $t[2]["title"]; ?></h5>
+                        </div>                            
+                    </li>
+                    <li class="col-md-3">
+                        <a href="<?php echo $t[3]["url"]; ?>"><img class="small image" src="<?php echo $t[3]["tn"]; ?>"></a>
+                        <div class="video-info">
+                            <h5><span class="clicks">点击率：<?php echo $t[3]["wcount"]; ?></span></h5>
+                            <h5><?php echo $t[3]["title"]; ?></h5>
+                        </div>                            
+                    </li> 
+                </ul>
+                <ul class="row">                   
+                    <li class="col-md-3">
+                        <a href="<?php echo $t[4]["url"]; ?>"><img class="small image" src="<?php echo $t[4]["tn"]; ?>"></a>
+                        <div class="video-info">
+                            <h5><span class="clicks">点击率：<?php echo $t[4]["wcount"]; ?></span></h5>
+                            <h5><?php echo $t[4]["title"]; ?></h5>
+                        </div>                            
+                    </li>
+                    <li class="col-md-3">
+                        <a href="<?php echo $t[5]["url"]; ?>"><img class="small image" src="<?php echo $t[5]["tn"]; ?>"></a>
+                        <div class="video-info">
+                            <h5><span class="clicks">点击率：<?php echo $t[5]["wcount"]; ?></span></h5>
+                            <h5><?php echo $t[5]["title"]; ?></h5>
+                        </div>                            
+                    </li>                    
+                    <li class="col-md-3">
+                        <a href="<?php echo $t[6]["url"]; ?>"><img class="small image" src="<?php echo $t[6]["tn"]; ?>"></a>
+                        <div class="video-info">
+                            <h5><span class="clicks">点击率：<?php echo $t[6]["wcount"]; ?></span></h5>
+                            <h5><?php echo $t[6]["title"]; ?></h5>
+                        </div>                            
+                    </li>
+                    <li class="col-md-3">
+                        <a href="<?php echo $t[7]["url"]; ?>"><img class="small image" src="<?php echo $t[7]["tn"]; ?>"></a>
+                        <div class="video-info">
+                            <h5><span class="clicks">点击率：<?php echo $t[7]["wcount"]; ?></span></h5>
+                            <h5><?php echo $t[7]["title"]; ?></h5>
+                        </div>                            
+                    </li>
+                </ul>
             </div>
         </div>
         </div>

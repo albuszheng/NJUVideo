@@ -68,42 +68,18 @@ body {
     font-size: 1rem;
 }
 
-#microMovie .videoList {
+#NJUVideoSight,#microCourse,#graduate,#microMovie .videoList {
+/*    padding-left: 10px;*/
+    list-style-position: inside;
+}
+
+.videoList ul{
     padding-left: 0px;
-    list-style-position: inside;
-}
-
-.videoList .row{
-    margin-left: -43px;
-    padding-left: -30px;
-}
-
-#microCourse .videoList {
-    padding-left: 0px;
-    list-style-position: inside;
-}
-
-#NJUVideoSight .videoList {
-    padding-left: 0px;
-    list-style-position: inside;
-}
-
-#graduate .videoList {
-/*    text-align: right;*/
-    /*    list-style:none;*/
-/*    padding-right: 0px;*/
-/*    padding-left: px;*/
-    margin-left: 00px;
-    list-style-position: inside;
-}
-
-.videoList >ul li:first-child {
-    margin-bottom: 26px;
 }
 
 .videoList li{
     list-style: none;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
 
 .underline {
@@ -111,10 +87,6 @@ body {
     background-repeat: repeat-x;
     height: 2px;
     margin-bottom: 20px;
-}
-
-#graduate,#microMovie,#microCourse,#NJUVideoSight {
-/*    padding-left: 0; */
 }
 
 h3 {
@@ -155,7 +127,7 @@ h3 {
     margin-top: -28px;
     text-align: right;
     padding-right: 2px;
-    color: #ffffff;
+    color: #f4f4f4;
 }
 
 .main-content {
@@ -164,16 +136,24 @@ h3 {
 }
 
 .huge.image + .video-info{
-    margin-top: -32px;
-}
-.video-info>h4{
-    padding-left: 2px 
+    margin-top: -32p;
 }
 
-.video-info-small{
-    margin-top: -17px;
+.video-info h4{
     padding-left: 2px;
-    color: #ffffff;
+/*    color: #000000;*/
+}
+
+a + .video-info{
+    margin-top: -33px;
+    padding-left: 2px;
+    color: #f4f4f4;
+    margin-bottom: 10px;
+}
+
+a + .video-info h5{
+/*    padding: 0px;*/
+    margin: 1px;
 }
 
 .pageTitle {
@@ -183,9 +163,6 @@ h3 {
     color: #454545;
     text-decoration: none;
     background: #f4f4f4;
-}
-.video-info h4 {
-    color: #000000;
 }
 
 .picturefill-large {
@@ -284,11 +261,6 @@ h3 {
 }
 .video-info h4 {
     color: #ffffff;
-}
-
-.small.image {
-    width: 91%;
-    font-size: 1rem;
 }
 
 a,a:hover,a:active{
