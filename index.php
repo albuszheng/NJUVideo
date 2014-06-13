@@ -61,6 +61,7 @@ function top($cid, $c) {
         
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="coverflow.css">
         
         <script src="js/jquery.min.js" type="text/javascript"></script>
         <script src="js/index.js" type="text/javascript"></script>
@@ -74,7 +75,16 @@ function top($cid, $c) {
     </head>
     <body>
         <!-- top slider bar-->
-        <div class="banner visible-md visible-lg">
+        <div class="banner visible-md visible-lg ui-coverflow-wrapper ui-clearfix">
+            <div id="coverflow" class="wrapper ui-coverflow">
+    <!-- these children will be part of the coverflow -->
+                <img src="images/slider/slider_3.jpg"  height="360">
+                <img src="images/slider/slider_3.jpg"  height="360">
+                <img src="images/slider/slider_3.jpg"  height="360">
+                <img src="images/slider/slider_3.jpg"  height="360">
+                <img src="images/slider/slider_3.jpg"  height="360">
+            </div>
+<!--
             <ul id="splash">
                 <li>
                     <img src="images/slider/slider_0.jpg" width="100%" height="360" alt="" />
@@ -92,9 +102,10 @@ function top($cid, $c) {
                     <img src="images/slider/slider_0.jpg" width="100%" height="360" alt="" />
                 </li>
             </ul>
+-->
         </div>
         <!-- shadow -->
-	    <div class="banner-shadow"></div>
+	    <div class="banner-shadow visible-md visible-lg"></div>
         <!-- nav bar -->
         <div id="navBar" class="nav navbar-inverse" role="navigation">
             <div class="container">
@@ -417,6 +428,7 @@ function top($cid, $c) {
         </div>
         <!-- js -->
         <script src="js/jquery.min.js"></script>
+        <script src="js/coverflow.min.js" type="text/javascript"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery.zaccordion.js" type="text/javascript"></script>
         <script src="js/stickUp.min.js" type="text/javascript"></script>
@@ -428,6 +440,18 @@ function top($cid, $c) {
                   $('#navBar').stickUp();
                 });
               });
+        </script>
+       <script>
+            $(function() {
+                $('#coverflow').coverflow({
+                    active : 2,
+                    overlap : 0.6,
+                    scale : 0.95,
+                    easing : "easeInOutCirc",
+                    duration : 500
+//                    trigger: "swip"
+                });        
+            });
         </script>
         <script type="text/javascript">
             $("#splash").zAccordion({

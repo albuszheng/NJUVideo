@@ -400,8 +400,15 @@
         </script>
         <script>
             $(function() {
-                        $('#coverflow').coverflow();
-                  });
+                $('#coverflow').coverflow({
+                    active : 2,
+                    overlap : 0.6,
+                    scale : 0.95,
+                    easing : "easeInOutCirc",
+                    duration : 500
+//                    trigger: "swip"
+                });        
+            });
         </script>
         <script type="text/javascript">
             $("#splash").zAccordion({
